@@ -1,5 +1,7 @@
 # nuxt-shopsys
-
+![release:1.0.0](https://img.shields.io/badge/release-1.0.0-blue)
+![Nuxt.js Version](https://img.shields.io/badge/Nuxt.js%20Version-2.14.6-brightgreen)
+![last-commit](https://img.shields.io/github/last-commit/quan930/nuxt-shopsys)
 ### Build Setup
 
 ```bash
