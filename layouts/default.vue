@@ -1,10 +1,10 @@
 <template>
   <div style="height: 100vh">
     <el-container id="con">
-      <el-aside>
+      <el-aside style="width: 150px">
         <el-menu
           style="height: 100vh;width: 150px"
-          default-active="1"
+          :default-active="view"
           class="el-menu-vertical-demo"
           background-color="#545c64"
           text-color="#fff"
@@ -44,29 +44,67 @@ export default {
   },
   methods:{
     /**
-     * 切换视图
+     * 切换路由
      * @param index
      * @param indexPath
      */
     showPage(index, indexPath) {
       switch (index) {
         case '1':
-          console.log("首页面")
           this.$router.push('/')
           break
         case '2':
-          console.log("商品列表页面")
           this.$router.push('/books')
           break
         case '3':
-          console.log("商品详情页面")
           this.$router.push('/bookinfo')
           break
         case '4':
-          console.log("添加商品页面")
           this.$router.push('/bookadd')
       }
-      this.view = index
+    }
+  },
+  watch: {
+    //监控路由更改
+    $route: {
+      handler: function(val, oldVal){
+        switch (val.name) {
+          case 'books':
+            this.view='2'
+            break
+          case 'bookadd':
+            this.view='4'
+            break
+          case 'bookinfo':
+          case 'bookinfo-id':
+            this.view='3'
+            break
+          default:
+            this.view='1'
+            break
+        }
+        console.log(val);
+        // Object.assign(this.routeParams, val.params)
+      },
+      // 深度观察监听
+      deep: true
+    }
+  },
+  mounted() {
+    switch (this.$route.name) {
+      case 'books':
+        this.view='2'
+        break
+      case 'bookadd':
+        this.view='4'
+        break
+      case 'bookinfo':
+      case 'bookinfo-id':
+        this.view='3'
+        break
+      default:
+        this.view='1'
+        break
     }
   }
 }

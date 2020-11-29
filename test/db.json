@@ -18,6 +18,22 @@
       "count": 15,
       "author": " Cay S. Horstmann",
       "Press": "机械工业出版社"
+    },
+    {
+      "id": "3",
+      "name": "Spring in Action",
+      "price": "77.77",
+      "count": "15",
+      "author": "Craig Walls",
+      "Press": "人民邮电出版社"
+    },
+    {
+      "id": "4",
+      "name": "Spring Microservices in Action",
+      "price": "67.9",
+      "count": "30",
+      "author": "John Carnell",
+      "Press": "人民邮电出版社"
     }
   ]
 }

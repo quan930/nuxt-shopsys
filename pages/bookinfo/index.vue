@@ -7,12 +7,7 @@
 </template>
 
 <script>
-export default {
-  layout: function(context){
-    return 'bookinfo_layout'
-  }
-
-}
+export default {}
 </script>
 
 <style scoped>
