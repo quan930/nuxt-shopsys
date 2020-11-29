@@ -4,7 +4,7 @@
       <el-aside>
         <el-menu
           style="height: 100vh;width: 150px"
-          default-active="1"
+          default-active="3"
           class="el-menu-vertical-demo"
           background-color="#545c64"
           text-color="#fff"
