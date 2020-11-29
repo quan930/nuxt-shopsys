@@ -42,7 +42,7 @@ export default {
       console.log(data)
       return { book: data }
     } catch (e) {
-      error({ statusCode: 404, message: `${params.id} 不存在` })
+      error({ statusCode: 404, message: `商品 ${params.id} 不存在` })
     }
   },
   head: {

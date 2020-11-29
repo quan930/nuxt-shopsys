@@ -42,27 +42,13 @@ import axios from "axios";
 export default {
   data:function (){
     return{
-      form:{
-        id: null,
-        name: null,
-        price: null,
-        count: null,
-        author: null,
-        Press: null
-      }
+      form:{id: null, name: null, price: null, count: null, author: null, Press: null}
     }
   },
   methods:{
     onSubmit:async function () {
       try {
-        const {data} = await axios.post('http://localhost:4000/book/', {
-          id: this.form.id,
-          name: this.form.name,
-          price: this.form.price,
-          count: this.form.count,
-          author: this.form.author,
-          Press: this.form.Press
-        })
+        const {data} = await axios.post('http://localhost:4000/book/', {id: this.form.id, name: this.form.name, price: this.form.price, count: this.form.count, author: this.form.author, Press: this.form.Press})
         console.log(data)
         this.cancel();
         await this.$router.push('/books')
@@ -71,15 +57,14 @@ export default {
       }
     },
     cancel:function (){
-      this.form={
-        id: null,
-        name: null,
-        price: null,
-        count: null,
-        author: null,
-        Press: null
-      }
+      this.form={id: null, name: null, price: null, count: null, author: null, Press: null}
     }
+  },
+  head: {
+    title: '添加商品',
+    meta: [
+      {hid: 'description', name: 'description', content: 'bookadd page description'}
+    ]
   }
 }
 </script>

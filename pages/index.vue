@@ -7,7 +7,14 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head: {
+    title: '商品',
+    meta: [
+      { hid: 'description', name: 'description', content: '商品列表' }
+    ]
+  }
+}
 </script>
 
 <style>

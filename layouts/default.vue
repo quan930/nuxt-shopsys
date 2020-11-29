@@ -11,7 +11,7 @@
           active-text-color="#ffd04b"
           @select="showPage">
           <el-menu-item index="1">
-            <i class="el-icon-menu"></i>
+            <i class="el-icon-s-shop"></i>
             <span slot="title">首页</span>
           </el-menu-item>
           <el-menu-item index="2">
@@ -19,11 +19,11 @@
             <span slot="title">商品列表</span>
           </el-menu-item>
           <el-menu-item index="3">
-            <i class="el-icon-document"></i>
+            <i class="el-icon-info"></i>
             <span slot="title">商品详情</span>
           </el-menu-item>
           <el-menu-item index="4">
-            <i class="el-icon-setting"></i>
+            <i class="el-icon-circle-plus"></i>
             <span slot="title">提交商品</span>
           </el-menu-item>
         </el-menu>
